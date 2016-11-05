@@ -1,0 +1,43 @@
+{
+  "name": "subscription-container",
+  "version": "0.0.0",
+  "description": "A react component that dispatches start and stop redux actions to drive a meteor subscription",
+  "main": "lib/index.js",
+  "config": {
+    "component": "SubContainer"
+  },
+  "scripts": {
+    "start": "react-component-template",
+    "test": "npm start test",
+    "template": "cf-react-component-template",
+    "precommit": "npm start precommit",
+    "prepush": "npm start prepush",
+    "postversion": "npm start postversion",
+    "prepublish": "npm start prepublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koleok/subscription-container.git"
+  },
+  "keywords": [
+    "component",
+    "react-component",
+    "react"
+  ],
+  "author": "Kyle Chamberlain; <kchamb3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koleok/subscription-container/issues"
+  },
+  "homepage": "https://github.com/koleok/subscription-container",
+  "peerDependencies": {
+    "react": "^0.14 || ^15"
+  },
+  "devDependencies": {
+    "cf-react-component-template": "0.1.8",
+    "react-component-template": "0.1.8"
+  },
+  "dependencies": {
+    "meteor-redux-middlewares": "koleok/meteor-redux-middlewares#temp-install"
+  }
+}

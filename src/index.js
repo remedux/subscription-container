@@ -1,0 +1,1 @@
+export { SubContainer } from './Component';
