@@ -23,6 +23,10 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 (Module exposed as `SubContainer`)
 ```
 
+## Demo
+ 
+[http://koleok.github.io/subscription-container](http://koleok.github.io/subscription-container)
+
 ## Usage
 ```js
 import React from 'react';
