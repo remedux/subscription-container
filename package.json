@@ -11,7 +11,6 @@
     "test": "npm start test",
     "template": "cf-react-component-template",
     "precommit": "npm start precommit",
-    "prepush": "npm start prepush",
     "postversion": "npm start postversion",
     "prepublish": "npm start prepublish"
   },
