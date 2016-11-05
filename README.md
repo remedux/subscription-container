@@ -40,11 +40,7 @@ import { Meteor } from 'meteor/meteor'
 
 const App = () => (
   <Provider store={store}>
-    <Subscriber
-      meteor={Meteor}
-      collection={Posts}
-      subscriptionKey="Posts.all"
-    >
+    <Subscriber meteor={Meteor} collection={Posts} subscriptionKey="Posts.all">
       {/* Any ol thing */}
     </SubContainer>
   </div>
