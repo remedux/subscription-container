@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { always } from 'ramda';
 import { connect } from 'react-redux';
 
 import {
@@ -87,4 +86,4 @@ const actions = {
   registerReactiveSource,
 };
 
-export default connect(always({}), actions)(Subscriber);
+export default connect(() => ({}), actions)(Subscriber);

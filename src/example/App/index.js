@@ -1,5 +1,5 @@
 import React from 'react';
-import {SubContainer} from '../..';
+import { SubContainer } from '../..';
 import css from './App.css';
 
 

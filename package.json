@@ -38,6 +38,7 @@
     "react-component-template": "0.1.8"
   },
   "dependencies": {
-    "meteor-redux-middlewares": "koleok/meteor-redux-middlewares#temp-install"
+    "meteor-redux-middlewares": "koleok/meteor-redux-middlewares#temp-install",
+    "react-redux": "^4.4.5"
   }
 }
