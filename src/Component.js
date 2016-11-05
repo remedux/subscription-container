@@ -25,18 +25,16 @@ class Subscriber extends Component {
     const noArg = {};
 
     switch (type) {
+      case 'reactiveSource':
+        return get && registerReactiveSource({ key, get });
+
       case 'subscription':
+      default:
         return meteor && collection && startSubscription({
           subscribe: () => meteor.subscribe(key),
           get: () => collection.find(query || noArg, queryOptions || noArg).fetch(),
           key,
         });
-
-      case 'reactiveSource':
-        return get && registerReactiveSource({ key, get });
-
-      default:
-        return undefined;
     }
   }
 
@@ -47,9 +45,9 @@ class Subscriber extends Component {
       stopSubscription,
     } = this.props;
 
-    return type === 'subscription'
-      ? stopSubscription(subscriptionKey)
-      : undefined;
+    return (
+      !type || type === 'subscription'
+    ) && stopSubscription(subscriptionKey);
   }
 
   render() {
@@ -63,14 +61,14 @@ class Subscriber extends Component {
 
 Subscriber.propTypes = {
   subscriptionKey: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['reactiveSource', 'subscription']).isRequired,
+  type: PropTypes.oneOf(['reactiveSource', 'subscription']),
 
   // Optional
   get: PropTypes.func,
   query: PropTypes.object,
-  meteor: PropTypes.object,
   collection: PropTypes.object,
   queryOptions: PropTypes.object,
+  meteor: PropTypes.object.isRequired,
 
   // Passed by connect
   startSubscription: PropTypes.func.isRequired,
