@@ -24,7 +24,7 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 ```
 
 ## Demo
- 
+
 [http://koleok.github.io/subscription-container](http://koleok.github.io/subscription-container)
 
 ## Usage
@@ -32,9 +32,14 @@ Don't forget to manually install peer dependencies (`react`) if you use npm@3.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { SubContainer } from 'subscription-container';
+import { Provider } from 'react-redux';
+
+import Posts from './Posts';
+import store from './store';
+import { Meteor } from 'meteor/meteor'
 
 const App = () => (
-  <div>
+  <Provider store={store}>
     <Subscriber
       meteor={Meteor}
       collection={Posts}
